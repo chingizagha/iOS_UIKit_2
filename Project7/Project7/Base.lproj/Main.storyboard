@@ -52,11 +52,11 @@
             </objects>
             <point key="canvasLocation" x="1814.5038167938931" y="9.8591549295774659"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="5RW-vH-PO7">
             <objects>
                 <navigationController storyboardIdentifier="NavController" automaticallyAdjustsScrollViewInsets="NO" id="HyQ-2C-PPh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BLD-bt-WW3"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="BLD-bt-WW3"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yn5-3T-SD1">
@@ -78,6 +78,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7aa-7m-X7W" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iYI-MX-YKN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
