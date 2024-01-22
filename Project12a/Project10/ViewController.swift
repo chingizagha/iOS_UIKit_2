@@ -18,17 +18,11 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         
         let defaults = UserDefaults.standard
         
-        if let savedPeople = defaults.object(forKey: "people") as? Data {
-            let jsonDecoder = JSONDecoder()
-            
-            do {
-                people = try jsonDecoder.decode([Person].self, from: savedPeople)
-            } catch {
-                print("Failed to load people")
+        if let savedPeople = defaults.object(forKey: "people") as? Data{
+            if let decodedPeople = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedPeople) as? [Person]{
+                people = decodedPeople
             }
         }
-        
-        collectionView.reloadData()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -101,13 +95,9 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     func save() {
-        let jsonEncoder = JSONEncoder()
-        
-        if let savedData = try? jsonEncoder.encode(people){
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false){
             let defaults = UserDefaults.standard
             defaults.setValue(savedData, forKey: "people")
-        } else {
-            print("Failed to save data")
         }
     }
 }
