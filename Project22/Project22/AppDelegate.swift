@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  ProjectPro7
+//  Project22
 //
-//  Created by Chingiz on 31.01.24.
+//  Created by Chingiz on 01.02.24.
 //
 
 import UIKit
