@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ProjectPro5
 //
-//  Created by Chingiz on 26.01.24.
+//  Created by Chingiz on 02.02.24.
 //
 
 import UIKit
